@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEKO Coffee & Plants | San Antonio Plant Cafe | Semi-Hydro & Self-Watering Plant Shop</title>
+<meta name="description" content="NEKO Coffee & Plants in San Antonio — a cozy matcha cafe and modern indoor plant shop specializing in semi-hydro, LECA, pon-style, and self-watering plant systems. Easy-care houseplants for busy people.">
+<meta name="keywords" content="semi hydro plants San Antonio, LECA plants San Antonio, self watering plants San Antonio, sub irrigated plants San Antonio, plant cafe San Antonio, coffee and plants San Antonio, San Antonio plant shop, easy care houseplants San Antonio, modern houseplants San Antonio, indoor plant care San Antonio">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --warm-white: #faf8f3;
+    --matcha: #7a9e6e;
+    --matcha-dark: #4e6b44;
+    --matcha-light: #b8d4a8;
+    --clay: #c17f5a;
+    --espresso: #2d1f14;
+    --slate: #3a4a3e;
+    --fog: #e8e2d6;
+    --glass-green: #d4e8cc;
+    --leca-amber: #c8a86e;
+    --ink: #1a2018;
+    --mist: #f0ede6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 3rem;
+    background: rgba(250, 248, 243, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(122, 158, 110, 0.15);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--espresso);
+    letter-spacing: 0.04em;
+  }
+
+  .nav-logo span {
+    color: var(--matcha);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.2rem;
+    align-items: center;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--slate);
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--matcha-dark); }
+
+  .nav-cta {
+    background: var(--matcha);
+    color: var(--warm-white) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2px;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--matcha-dark) !important; color: var(--warm-white) !important; }
+
+  /* HERO — SPLIT */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 70px;
+  }
+
+  .hero-half {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 4rem;
+    overflow: hidden;
+  }
+
+  .hero-coffee {
+    background: var(--espresso);
+    color: var(--cream);
+  }
+
+  .hero-plants {
+    background: var(--matcha-dark);
+    color: var(--cream);
+  }
+
+  .hero-half::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.08;
+  }
+
+  .hero-coffee::before {
+    background: radial-gradient(circle at 30% 60%, var(--clay) 0%, transparent 65%);
+  }
+
+  .hero-plants::before {
+    background: radial-gradient(circle at 70% 40%, var(--matcha-light) 0%, transparent 65%);
+  }
+
+  .hero-tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 4.5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    margin-bottom: 1.4rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-h1 em {
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .hero-body {
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.82;
+    max-width: 360px;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid currentColor;
+    color: inherit;
+    padding: 0.75rem 1.8rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.25s;
+    position: relative;
+    z-index: 1;
+    align-self: flex-start;
+  }
+
+  .hero-coffee .hero-btn:hover {
+    background: var(--clay);
+    border-color: var(--clay);
+  }
+
+  .hero-plants .hero-btn:hover {
+    background: var(--matcha);
+    border-color: var(--matcha);
+  }
+
+  .hero-visual {
+    position: absolute;
+    right: 2rem;
+    bottom: 3rem;
+    font-size: 7rem;
+    opacity: 0.07;
+    line-height: 1;
+  }
+
+  /* DIVIDER BADGE */
+  .split-badge {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 64px;
+    height: 64px;
+    background: var(--warm-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--matcha-dark);
+    font-weight: 600;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    pointer-events: none;
+  }
+
+  /* SECTION SHARED */
+  section { padding: 6rem 0; }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--matcha);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--espresso);
+    margin-bottom: 1.4rem;
+  }
+
+  .section-title em { font-style: italic; }
+
+  .section-body {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--slate);
+    max-width: 640px;
+  }
+
+  /* MODERN HOUSEPLANTS MADE EASIER */
+  .plants-intro {
+    background: var(--mist);
+    border-top: 1px solid var(--fog);
+    border-bottom: 1px solid var(--fog);
+  }
+
+  .plants-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .plants-visual-stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .plant-img-card {
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--matcha-dark);
+    aspect-ratio: 3/4;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .plant-img-card:first-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 16/9;
+  }
+
+  .plant-img-card svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+  }
+
+  .plant-card-label {
+    position: relative;
+    z-index: 1;
+    background: rgba(0,0,0,0.45);
+    color: var(--cream);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.7rem;
+    width: 100%;
+  }
+
+  /* WHY SEMI-HYDRO — benefit cards */
+  .why-section { background: var(--warm-white); }
+
+  .benefit-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin-top: 3rem;
+  }
+
+  .benefit-card {
+    background: var(--warm-white);
+    border: 1px solid var(--fog);
+    padding: 1.6rem 1.4rem;
+    border-radius: 4px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .benefit-card:hover {
+    border-color: var(--matcha);
+    transform: translateY(-2px);
+  }
+
+  .benefit-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  .benefit-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--espresso);
+    margin-bottom: 0.4rem;
+  }
+
+  .benefit-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--slate);
+  }
+
+  /* PLANT SERVICES */
+  .services-section {
+    background: var(--espresso);
+    color: var(--cream);
+  }
+
+  .services-section .section-title { color: var(--cream); }
+  .services-section .section-label { color: var(--matcha-light); }
+  .services-section .section-body { color: rgba(245, 240, 232, 0.75); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 4px;
+    padding: 2rem 1.6rem;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--matcha);
+    transition: height 0.3s;
+  }
+
+  .service-card:hover {
+    border-color: rgba(122, 158, 110, 0.4);
+    background: rgba(122, 158, 110, 0.06);
+  }
+
+  .service-card:hover::before { height: 100%; }
+
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--matcha-light);
+    opacity: 0.6;
+    margin-bottom: 0.6rem;
+  }
+
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .service-desc {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: rgba(245, 240, 232, 0.68);
+  }
+
+  .service-tag {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--matcha-light);
+    border: 1px solid rgba(184, 212, 168, 0.35);
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+  }
+
+  /* COFFEE & MATCHA MENU */
+  .menu-section { background: var(--mist); }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+    align-items: start;
+  }
+
+  .menu-column-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--espresso);
+    border-bottom: 1px solid var(--fog);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.08);
+  }
+
+  .menu-item-name { font-size: 0.95rem; color: var(--slate); }
+  .menu-item-desc { font-size: 0.78rem; color: #888; margin-top: 0.15rem; }
+  .menu-item-price { font-size: 0.88rem; color: var(--matcha-dark); font-weight: 500; }
+
+  /* EDUCATION / WORKSHOPS */
+  .workshop-section { background: var(--warm-white); }
+
+  .workshop-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .workshop-list {
+    list-style: none;
+    margin-top: 2rem;
+  }
+
+  .workshop-list li {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--fog);
+    font-size: 0.95rem;
+    color: var(--slate);
+    line-height: 1.5;
+  }
+
+  .workshop-list li::before {
+    content: '→';
+    color: var(--matcha);
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    margin-top: 0.1rem;
+  }
+
+  .workshop-aside {
+    background: var(--matcha-dark);
+    border-radius: 4px;
+    padding: 3rem;
+    color: var(--cream);
+  }
+
+  .workshop-aside-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .workshop-aside p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    opacity: 0.82;
+    margin-bottom: 1.4rem;
+  }
+
+  .workshop-aside .hero-btn {
+    color: var(--cream);
+    border-color: rgba(245,240,232,0.5);
+  }
+
+  /* VISIT / FOOTER */
+  .visit-section {
+    background: var(--slate);
+    color: var(--cream);
+    text-align: center;
+    padding: 5rem 3rem;
+  }
+
+  .visit-section .section-title { color: var(--cream); margin-bottom: 0.8rem; }
+  .visit-section .section-label { color: var(--matcha-light); }
+
+  .visit-info {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .visit-block { text-align: center; }
+  .visit-block-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--matcha-light);
+    margin-bottom: 0.5rem;
+  }
+  .visit-block p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.75;
+  }
+
+  .visit-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-outline-light {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid rgba(245,240,232,0.45);
+    color: var(--cream);
+    padding: 0.75rem 1.8rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .btn-outline-light:hover { background: var(--matcha); border-color: var(--matcha); }
+
+  .btn-filled {
+    background: var(--matcha);
+    color: var(--cream) !important;
+    border-color: var(--matcha) !important;
+  }
+  .btn-filled:hover { background: var(--matcha-dark) !important; border-color: var(--matcha-dark) !important; }
+
+  footer {
+    background: var(--espresso);
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  footer p { font-size: 0.8rem; color: rgba(245,240,232,0.4); }
+
+  footer .footer-links { display: flex; gap: 1.5rem; }
+  footer .footer-links a {
+    font-size: 0.78rem;
+    color: rgba(245,240,232,0.45);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  footer .footer-links a:hover { color: var(--matcha-light); }
+
+  /* SUBSTRATE EXPLAINER */
+  .substrate-section {
+    background: var(--fog);
+    padding: 5rem 0;
+  }
+
+  .substrate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .substrate-card {
+    background: var(--warm-white);
+    border-radius: 4px;
+    padding: 1.8rem 1.4rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .substrate-card:hover { border-color: var(--matcha); }
+
+  .substrate-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .substrate-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--espresso);
+    margin-bottom: 0.4rem;
+  }
+
+  .substrate-desc {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--slate);
+  }
+
+  /* SVG ILLUSTRATIONS */
+  .illustration-hero-coffee {
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 55%;
+    height: 80%;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+
+  .illustration-hero-plants {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 55%;
+    height: 80%;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-half > * {
+    animation: fadeUp 0.7s ease both;
+  }
+
+  .hero-coffee > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-coffee > *:nth-child(2) { animation-delay: 0.2s; }
+  .hero-coffee > *:nth-child(3) { animation-delay: 0.3s; }
+  .hero-coffee > *:nth-child(4) { animation-delay: 0.4s; }
+
+  .hero-plants > *:nth-child(1) { animation-delay: 0.2s; }
+  .hero-plants > *:nth-child(2) { animation-delay: 0.3s; }
+  .hero-plants > *:nth-child(3) { animation-delay: 0.4s; }
+  .hero-plants > *:nth-child(4) { animation-delay: 0.5s; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.2rem; }
+    nav ul { display: none; }
+
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-half { padding: 4rem 1.8rem; }
+    .split-badge { display: none; }
+
+    .section-inner { padding: 0 1.5rem; }
+
+    .plants-intro-grid,
+    .menu-grid,
+    .workshop-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+
+    .plants-visual-stack { grid-template-columns: 1fr; }
+    .plant-img-card:first-child { grid-column: 1; aspect-ratio: 16/9; }
+
+    footer { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">NEKO <span>Coffee & Plants</span></div>
+  <ul>
+    <li><a href="#coffee">Coffee & Matcha</a></li>
+    <li><a href="#plant-shop">Plant Shop</a></li>
+    <li><a href="#semi-hydro">Semi-Hydro</a></li>
+    <li><a href="#workshops">Workshops</a></li>
+    <li><a href="#visit">Visit</a></li>
+    <li><a href="#visit" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SPLIT -->
+<section class="hero" id="home" style="padding-top:70px;">
+  <div class="hero-half hero-coffee">
+    <div class="hero-tag">☕ San Antonio's plant café</div>
+    <h1 class="hero-h1">Good coffee.<br><em>Great roots.</em></h1>
+    <p class="hero-body">Handcrafted espresso, ceremonial matcha, and a slow morning made better by living greenery all around you.</p>
+    <a href="#coffee" class="hero-btn">See the Menu</a>
+    <div class="hero-visual">☕</div>
+  </div>
+
+  <div class="hero-half hero-plants">
+    <div class="hero-tag">🌿 Modern indoor plant shop</div>
+    <h1 class="hero-h1">Plants that<br><em>actually thrive.</em></h1>
+    <p class="hero-body">Semi-hydro, LECA, pon-style mineral mixes, and self-watering systems. We help San Antonio plant lovers grow indoors with less guesswork.</p>
+    <a href="#plant-shop" class="hero-btn">Explore the Shop</a>
+    <div class="hero-visual">🌱</div>
+  </div>
+</section>
+
+<!-- MODERN HOUSEPLANTS MADE EASIER -->
+<section class="plants-intro" id="plant-shop">
+  <div class="section-inner">
+    <div class="plants-intro-grid">
+      <div>
+        <p class="section-label">🌿 The Plant Shop</p>
+        <h2 class="section-title">Modern Houseplants,<br><em>Made Easier</em></h2>
+        <p class="section-body">NEKO Coffee & Plants is more than a cafe with a few plants on the shelf. We help San Antonio plant lovers discover cleaner, easier ways to grow indoors using semi-hydro, LECA, pon-style mineral mixes, self-watering pots, and sub-irrigated plant systems.</p>
+        <p class="section-body" style="margin-top:1rem;">Whether you are buying your first pothos or converting your favorite monstera out of soil, we can help you understand the setup, the watering rhythm, and the supplies you need.</p>
+        <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="#services" class="hero-btn" style="color:var(--espresso); border-color:var(--espresso);">See Plant Services</a>
+          <a href="#workshops" class="hero-btn" style="color:var(--matcha-dark); border-color:var(--matcha-dark);">Book a Workshop</a>
+        </div>
+      </div>
+
+      <div class="plants-visual-stack">
+        <!-- Wide card: propagation station illustration -->
+        <div class="plant-img-card" style="background: linear-gradient(135deg, var(--matcha-dark) 0%, var(--slate) 100%);">
+          <svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg">
+            <!-- Glass vessels with roots -->
+            <rect x="120" y="60" width="50" height="180" rx="25" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <ellipse cx="145" cy="240" rx="25" ry="10" fill="rgba(255,255,255,0.1)"/>
+            <!-- water level -->
+            <rect x="121" y="160" width="48" height="79" rx="0" fill="rgba(184,212,168,0.2)"/>
+            <!-- roots -->
+            <path d="M145 170 Q130 195 125 220" stroke="rgba(200,168,110,0.7)" stroke-width="1.5" fill="none"/>
+            <path d="M145 175 Q160 200 155 230" stroke="rgba(200,168,110,0.7)" stroke-width="1.5" fill="none"/>
+            <path d="M145 180 Q143 210 140 230" stroke="rgba(200,168,110,0.6)" stroke-width="1" fill="none"/>
+            <!-- Stem up -->
+            <line x1="145" y1="60" x2="145" y2="90" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+            <path d="M145 90 Q120 75 110 55" stroke="rgba(122,158,110,0.8)" stroke-width="1.5" fill="none"/>
+            <path d="M145 90 Q170 70 175 50" stroke="rgba(122,158,110,0.8)" stroke-width="1.5" fill="none"/>
+            <!-- Leaf shapes -->
+            <ellipse cx="105" cy="50" rx="16" ry="10" fill="rgba(122,158,110,0.6)" transform="rotate(-20,105,50)"/>
+            <ellipse cx="178" cy="46" rx="16" ry="10" fill="rgba(122,158,110,0.6)" transform="rotate(15,178,46)"/>
+
+            <!-- Second vessel -->
+            <rect x="300" y="80" width="44" height="160" rx="22" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+            <rect x="301" y="170" width="42" height="69" rx="0" fill="rgba(184,212,168,0.15)"/>
+            <path d="M322 175 Q308 200 305 225" stroke="rgba(200,168,110,0.6)" stroke-width="1.5" fill="none"/>
+            <path d="M322 178 Q336 205 332 230" stroke="rgba(200,168,110,0.6)" stroke-width="1.5" fill="none"/>
+            <line x1="322" y1="80" x2="322" y2="108" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+            <path d="M322 108 Q305 92 298 72" stroke="rgba(122,158,110,0.7)" stroke-width="1.5" fill="none"/>
+            <path d="M322 108 Q342 88 348 68" stroke="rgba(122,158,110,0.7)" stroke-width="1.5" fill="none"/>
+            <ellipse cx="293" cy="67" rx="14" ry="9" fill="rgba(122,158,110,0.55)" transform="rotate(-15,293,67)"/>
+            <ellipse cx="352" cy="63" rx="14" ry="9" fill="rgba(122,158,110,0.55)" transform="rotate(20,352,63)"/>
+
+            <!-- LECA pellet suggestion -->
+            <circle cx="240" cy="130" r="6" fill="rgba(200,168,110,0.4)"/>
+            <circle cx="254" cy="140" r="5" fill="rgba(200,168,110,0.35)"/>
+            <circle cx="233" cy="145" r="7" fill="rgba(200,168,110,0.3)"/>
+            <circle cx="248" cy="125" r="5" fill="rgba(200,168,110,0.4)"/>
+
+            <text x="30" y="310" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.3)" letter-spacing="2">PROPAGATION STATION</text>
+          </svg>
+          <div class="plant-card-label">Propagation & Glass Vessel Setup</div>
+        </div>
+
+        <!-- LECA card -->
+        <div class="plant-img-card" style="background: linear-gradient(160deg, #3a3020 0%, #5a4530 100%); aspect-ratio:3/4;">
+          <svg viewBox="0 0 220 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- pot shape -->
+            <path d="M50 120 L60 270 Q110 285 160 270 L170 120 Z" fill="rgba(200,140,90,0.25)" stroke="rgba(200,140,90,0.4)" stroke-width="1"/>
+            <!-- LECA pellets -->
+            <circle cx="90" cy="200" r="9" fill="rgba(200,168,110,0.5)"/>
+            <circle cx="110" cy="190" r="8" fill="rgba(200,168,110,0.45)"/>
+            <circle cx="130" cy="205" r="10" fill="rgba(200,168,110,0.5)"/>
+            <circle cx="100" cy="215" r="8" fill="rgba(200,168,110,0.4)"/>
+            <circle cx="120" cy="220" r="9" fill="rgba(200,168,110,0.45)"/>
+            <circle cx="80" cy="220" r="7" fill="rgba(200,168,110,0.4)"/>
+            <circle cx="140" cy="218" r="8" fill="rgba(200,168,110,0.4)"/>
+            <circle cx="105" cy="230" r="7" fill="rgba(200,168,110,0.35)"/>
+            <!-- water line -->
+            <line x1="55" y1="245" x2="165" y2="245" stroke="rgba(184,212,168,0.5)" stroke-width="1" stroke-dasharray="4,3"/>
+            <!-- plant stem -->
+            <line x1="110" y1="120" x2="110" y2="180" stroke="rgba(122,158,110,0.7)" stroke-width="2"/>
+            <path d="M110 140 Q85 115 70 100" stroke="rgba(122,158,110,0.7)" stroke-width="1.5" fill="none"/>
+            <ellipse cx="65" cy="96" rx="20" ry="12" fill="rgba(78,107,68,0.6)" transform="rotate(-20,65,96)"/>
+            <path d="M110 155 Q140 130 155 115" stroke="rgba(122,158,110,0.7)" stroke-width="1.5" fill="none"/>
+            <ellipse cx="160" cy="111" rx="20" ry="12" fill="rgba(78,107,68,0.6)" transform="rotate(15,160,111)"/>
+            <text x="60" y="295" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.3)" letter-spacing="2">LECA SUBSTRATE</text>
+          </svg>
+          <div class="plant-card-label">LECA-Grown Plants</div>
+        </div>
+
+        <!-- Self-watering card -->
+        <div class="plant-img-card" style="background: linear-gradient(160deg, var(--matcha-dark) 0%, #2a3a28 100%); aspect-ratio:3/4;">
+          <svg viewBox="0 0 220 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- self-watering pot double-layer -->
+            <rect x="55" y="200" width="110" height="70" rx="4" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <rect x="65" y="130" width="90" height="85" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <!-- water indicator -->
+            <rect x="160" y="215" width="6" height="40" rx="3" fill="rgba(184,212,168,0.3)" stroke="rgba(184,212,168,0.5)" stroke-width="1"/>
+            <rect x="160" y="235" width="6" height="20" rx="3" fill="rgba(184,212,168,0.6)"/>
+            <!-- wick line -->
+            <line x1="110" y1="215" x2="110" y2="200" stroke="rgba(200,168,110,0.6)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <!-- plant -->
+            <line x1="110" y1="130" x2="110" y2="100" stroke="rgba(184,212,168,0.7)" stroke-width="2"/>
+            <path d="M110 112 Q88 90 78 72" stroke="rgba(122,158,110,0.8)" stroke-width="1.5" fill="none"/>
+            <ellipse cx="73" cy="67" rx="18" ry="11" fill="rgba(122,158,110,0.6)" transform="rotate(-25,73,67)"/>
+            <path d="M110 108 Q132 86 145 68" stroke="rgba(122,158,110,0.8)" stroke-width="1.5" fill="none"/>
+            <ellipse cx="150" cy="63" rx="18" ry="11" fill="rgba(122,158,110,0.6)" transform="rotate(20,150,63)"/>
+            <path d="M110 120 Q90 105 84 88" stroke="rgba(122,158,110,0.6)" stroke-width="1.2" fill="none"/>
+            <ellipse cx="80" cy="83" rx="14" ry="8" fill="rgba(78,107,68,0.5)" transform="rotate(-15,80,83)"/>
+            <text x="55" y="295" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.3)" letter-spacing="2">SELF-WATERING POT</text>
+          </svg>
+          <div class="plant-card-label">Self-Watering Systems</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SEMI-HYDRO -->
+<section class="why-section" id="semi-hydro">
+  <div class="section-inner">
+    <p class="section-label">🔬 Why It Works</p>
+    <h2 class="section-title">Why Semi-Hydro &<br><em>Self-Watering Plants?</em></h2>
+    <p class="section-body">Traditional potting soil works. But it can also be unpredictable, messy, and hard to read. Semi-hydroponic and self-watering setups change the equation for indoor growers by giving plants more consistent moisture and better airflow around the roots.</p>
+
+    <div class="benefit-cards">
+      <div class="benefit-card">
+        <span class="benefit-icon">💧</span>
+        <div class="benefit-title">Less Watering Guesswork</div>
+        <p class="benefit-desc">Visual water indicators and reservoir systems let you see exactly what your plant needs. No more poking soil or guessing.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">✨</span>
+        <div class="benefit-title">Cleaner Than Soil</div>
+        <p class="benefit-desc">LECA, pon-style mineral mixes, and inorganic substrates stay tidy on shelves, windowsills, and office desks.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">🦟</span>
+        <div class="benefit-title">Fewer Fungus Gnats</div>
+        <p class="benefit-desc">Soil-free substrates remove the conditions gnats need to breed. A common complaint from indoor plant owners, solved at the root level.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">🌬️</span>
+        <div class="benefit-title">Better Root Airflow</div>
+        <p class="benefit-desc">Open, chunky substrates like LECA give roots both moisture and oxygen. Less compaction means healthier growth over time.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">📊</span>
+        <div class="benefit-title">Easy Water Level Checks</div>
+        <p class="benefit-desc">Self-watering pots with clear reservoirs let you monitor moisture at a glance rather than guessing when to water next.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">🏃</span>
+        <div class="benefit-title">Great for Busy People</div>
+        <p class="benefit-desc">Sub-irrigated setups can go longer between waterings, making them well suited for busy homes, apartments, and offices.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">🏢</span>
+        <div class="benefit-title">Office & Cafe Friendly</div>
+        <p class="benefit-desc">Clean, drip-free, and low-mess. Perfect for desks, studio shelves, salon counters, and any space that deserves living greenery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSTRATE EXPLAINER -->
+<section class="substrate-section">
+  <div class="section-inner">
+    <p class="section-label">🪨 What We Work With</p>
+    <h2 class="section-title">The Substrates<br><em>We Carry & Use</em></h2>
+    <div class="substrate-grid">
+      <div class="substrate-card">
+        <div class="substrate-icon">🟠</div>
+        <div class="substrate-name">LECA</div>
+        <p class="substrate-desc">Lightweight expanded clay aggregate. Reusable, inorganic, and one of the most popular semi-hydro substrates for houseplants.</p>
+      </div>
+      <div class="substrate-card">
+        <div class="substrate-icon">⬛</div>
+        <div class="substrate-name">Pon-Style Mineral Mix</div>
+        <p class="substrate-desc">A blend of pumice, zeolite, and similar mineral components. Excellent drainage and aeration with consistent moisture delivery.</p>
+      </div>
+      <div class="substrate-card">
+        <div class="substrate-icon">🏺</div>
+        <div class="substrate-name">Self-Watering Pots</div>
+        <p class="substrate-desc">Pots with built-in water reservoirs and wicking systems. Works with any substrate and takes the timing stress out of watering.</p>
+      </div>
+      <div class="substrate-card">
+        <div class="substrate-icon">🧪</div>
+        <div class="substrate-name">Sub-Irrigated Setups</div>
+        <p class="substrate-desc">Bottom-up watering via reservoir. Plants drink what they need, reducing overwatering risk and keeping moisture consistent.</p>
+      </div>
+      <div class="substrate-card">
+        <div class="substrate-icon">🫙</div>
+        <div class="substrate-name">Glass Vessel Props</div>
+        <p class="substrate-desc">For water propagation and display. Watch roots develop in real time while cuttings establish before transitioning to substrate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANT SERVICES -->
+<section class="services-section" id="services">
+  <div class="section-inner">
+    <p class="section-label">🌿 What We Offer</p>
+    <h2 class="section-title">Plant Services</h2>
+    <p class="section-body">From your first easy-care plant to a full LECA conversion, we stock the supplies and carry the knowledge to help you grow with less stress.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-name">Ready-to-Go Semi-Hydro Plants</div>
+        <p class="service-desc">Plants already established in LECA, pon-style mineral mixes, or self-watering containers. Walk in, pick a plant, and leave with a setup that already makes sense.</p>
+        <span class="service-tag">In-Store</span>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-name">Plant Conversion Bar</div>
+        <p class="service-desc">Bring in a plant from home and ask us about converting it from soil to a cleaner semi-hydro or self-watering setup. We walk you through the process and the supplies.</p>
+        <span class="service-tag">In-Store Consult</span>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-name">Beginner Plant Kits</div>
+        <p class="service-desc">Starter kits that include a plant, pot, substrate, care card, and simple watering instructions. Everything you need to begin, in one place.</p>
+        <span class="service-tag">Beginner Friendly</span>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-name">Plant Care Workshops</div>
+        <p class="service-desc">Small in-person classes covering LECA, pon, sub-irrigation, propagation, and indoor plant care basics. Hands-on, low-pressure, and practical.</p>
+        <span class="service-tag">Workshops</span>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-name">Office & Gift Plants</div>
+        <p class="service-desc">Easy-care plants curated for desks, salons, offices, studios, and thoughtful gifts. If the recipient is busy, these systems are built for that.</p>
+        <span class="service-tag">Gifting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COFFEE & MATCHA MENU -->
+<section class="menu-section" id="coffee">
+  <div class="section-inner">
+    <p class="section-label">☕ The Cafe</p>
+    <h2 class="section-title">Coffee & Matcha,<br><em>Done Right</em></h2>
+    <p class="section-body">Every drink is made with intention, served in a space where living plants are part of the atmosphere. A slow coffee here is a whole experience.</p>
+
+    <div class="menu-grid">
+      <div>
+        <div class="menu-column-title">Espresso Bar</div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Cortado</div>
+            <div class="menu-item-desc">Equal parts espresso and steamed milk</div>
+          </div>
+          <span class="menu-item-price">$4.50</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Oat Cappuccino</div>
+            <div class="menu-item-desc">Double shot, microfoam oat milk</div>
+          </div>
+          <span class="menu-item-price">$5.25</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Iced Brown Sugar Latte</div>
+            <div class="menu-item-desc">Espresso, brown sugar syrup, oat milk</div>
+          </div>
+          <span class="menu-item-price">$5.75</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Pour Over</div>
+            <div class="menu-item-desc">Single origin, rotating roasts</div>
+          </div>
+          <span class="menu-item-price">$5.00</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Cold Brew Float</div>
+            <div class="menu-item-desc">House cold brew, coconut cream</div>
+          </div>
+          <span class="menu-item-price">$6.00</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="menu-column-title">Matcha & Tea</div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Ceremonial Matcha</div>
+            <div class="menu-item-desc">Traditional preparation, unsweetened</div>
+          </div>
+          <span class="menu-item-price">$5.50</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Matcha Latte</div>
+            <div class="menu-item-desc">Ceremonial grade, oat or almond milk</div>
+          </div>
+          <span class="menu-item-price">$6.00</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Iced Hojicha Latte</div>
+            <div class="menu-item-desc">Roasted green tea, milk, honey</div>
+          </div>
+          <span class="menu-item-price">$5.75</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Yuzu Matcha Tonic</div>
+            <div class="menu-item-desc">Matcha, tonic water, yuzu syrup</div>
+          </div>
+          <span class="menu-item-price">$6.50</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Chamomile Oat</div>
+            <div class="menu-item-desc">Steamed oat milk, chamomile, honey</div>
+          </div>
+          <span class="menu-item-price">$5.00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOPS -->
+<section class="workshop-section" id="workshops">
+  <div class="section-inner">
+    <div class="workshop-inner">
+      <div>
+        <p class="section-label">📚 Learn With Us</p>
+        <h2 class="section-title">Plant Care<br><em>Workshops</em></h2>
+        <p class="section-body">Small, in-person classes for people who want to understand the why behind semi-hydro, propagation, and indoor growing. No prior experience needed.</p>
+        <ul class="workshop-list">
+          <li>Intro to LECA: what it is, how it works, and how to transition a plant from soil</li>
+          <li>Pon-Style Mineral Mixes: understanding substrate drainage and moisture retention</li>
+          <li>Sub-Irrigation Basics: how bottom-watering reservoirs keep roots happy</li>
+          <li>Propagation Workshop: water props, moss poles, and rooting in substrate</li>
+          <li>Plant Selection for Busy People: which plants handle inconsistency well, and why</li>
+          <li>Office & Apartment Plants: low-light tolerant, low-mess, and long-lasting</li>
+        </ul>
+      </div>
+
+      <div class="workshop-aside">
+        <div class="workshop-aside-title">Not sure where to start?</div>
+        <p>Come in and talk to us. We are happy to walk you through the basics over a cup of coffee, point you toward the right starter kit, or help you figure out why a plant you love keeps struggling.</p>
+        <p>No pressure, no overwhelming advice. Just honest, beginner-friendly guidance from people who use these systems every day.</p>
+        <a href="#visit" class="hero-btn" style="margin-top:0.5rem;">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit-section" id="visit">
+  <p class="section-label">📍 Come See Us</p>
+  <h2 class="section-title" style="max-width:600px; margin:0 auto 1rem;">Visit NEKO in<br><em>San Antonio</em></h2>
+  <p style="font-size:1rem; opacity:0.7; max-width:480px; margin:0 auto; line-height:1.7;">A cup of something good, a plant you didn't know you needed, and the knowledge to keep it alive. All in one spot.</p>
+
+  <div class="visit-info">
+    <div class="visit-block">
+      <div class="visit-block-title">Hours</div>
+      <p>Monday – Friday: 7am – 6pm</p>
+      <p>Saturday – Sunday: 8am – 5pm</p>
+    </div>
+    <div class="visit-block">
+      <div class="visit-block-title">Location</div>
+      <p>San Antonio, Texas</p>
+      <p>Neighborhood TBD</p>
+    </div>
+    <div class="visit-block">
+      <div class="visit-block-title">Contact</div>
+      <p>hello@nekocoffeeplants.com</p>
+      <p>@nekocoffeeplants</p>
+    </div>
+  </div>
+
+  <div class="visit-ctas">
+    <a href="mailto:hello@nekocoffeeplants.com" class="btn-outline-light btn-filled">Send a Message</a>
+    <a href="#workshops" class="btn-outline-light">Book a Workshop</a>
+    <a href="#services" class="btn-outline-light">Explore Plant Services</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2024 NEKO Coffee & Plants · San Antonio, TX · Semi-hydro houseplants · LECA · Self-watering plant systems</p>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#coffee">Coffee & Matcha</a>
+    <a href="#plant-shop">Plant Shop</a>
+    <a href="#semi-hydro">Semi-Hydro</a>
+    <a href="#workshops">Workshops</a>
+  </div>
+</footer>
+
+</body>
+</html>
